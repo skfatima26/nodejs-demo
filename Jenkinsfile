@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    tools {
+        nodejs "Nodejs 24"   // yaha tumhara setup ka exact name use karna
+    }
     stages {
         stage('Install Dependencies') {
             steps {
@@ -8,7 +11,7 @@ pipeline {
         }
         stage('Start Application') {
             steps {
-                sh 'nohup node src/index.js &'
+                sh 'npm start'
             }
         }
     }
