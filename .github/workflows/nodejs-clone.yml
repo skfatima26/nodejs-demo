@@ -1,0 +1,20 @@
+name: Node.js Clone Workflow
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  clone-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Debug - list files in workspace
+      - name: List workspace files
+        run: ls -R
