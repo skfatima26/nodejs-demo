@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        nodejs "Nodejs 24"   // yaha tumhara setup ka exact name use karna
+        nodejs 'Nodejs 24'   // exact tool name
     }
     stages {
         stage('Install Dependencies') {
